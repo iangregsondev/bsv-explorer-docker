@@ -1,4 +1,4 @@
-FROM node:14 as builder
+FROM node:15 as builder
 ARG version=master
 
 RUN apt-get -yqq install git \
@@ -6,7 +6,7 @@ RUN apt-get -yqq install git \
     && cd /bsv-explorer \
     && npm install
 
-FROM node:14-alpine
+FROM node:15
 WORKDIR /bsv-explorer
 COPY --from=builder /bsv-explorer .
 CMD npm start
