@@ -4,7 +4,7 @@ Docker Image packaging for Blockchain Explorer for BitcoinSV, supporting private
 
 Previous versions would require block history of a minimum of 1 year unless run on _regtest_.
 
-This would fail if you decided to run a private chain, this can now be disabled using an environment variable.
+This would fail if you decided to run a private chain with less than 1 year of blocks, this can now be disabled using an environment variable.
 
 For more information, please see the project repository [here](https://github.com/iangregsondev/bsv-explorer)
 
